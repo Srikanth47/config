@@ -48,6 +48,9 @@ Here is the CloudWatch Event pattern rule we configured, which will be deployed 
   endpoint  =  var.sns_subscription_email_address_list[count.index]
   }
 `
+<br>
+<br>
+
 ## Deployment steps:
 
 `$CD to WorkSpace`
