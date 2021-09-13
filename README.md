@@ -1,11 +1,12 @@
-When ever there is new resource find out on the aws region The below automation will help to gives us an email notiofication alerts
+## When ever there is new resource find out on the aws region The below automation will help to gives us an email notiofication alerts
 
-Required AWS resources to automate this
+**Required AWS resources to automate this**
 
 1) AWS config
 2) CloudWatch Event rule
 3) SNS topic
 
+![work](https://user-images.githubusercontent.com/2727726/133079279-34090b48-4130-4ac3-b01a-5a53f9d41683.png)
 
 
 1) AWS Config will keeps on monitoring the resources, when ever there is new resources or change to the resource is it will keep tracking those resources
@@ -14,7 +15,7 @@ Required AWS resources to automate this
 
 Here is the CloudWatch Event pattern rule we configured, which will be deoloyed using terraform code
 
-{
+` {
   "source": [
     "aws.config"
   ],
@@ -36,14 +37,16 @@ Here is the CloudWatch Event pattern rule we configured, which will be deoloyed 
       ]
     }
   }
-}
-
+} `
 
 3) SNS topic and subscription list already been deployed using terraform code 
 
-resource "aws_sns_topic_subscription" "email-target" {
+` resource "aws_sns_topic_subscription" "email-target" {
   topic_arn = aws_sns_topic.aws_logins.arn
   protocol  = "email"
   count = length(var.sns_subscription_email_address_list)
   endpoint  =  var.sns_subscription_email_address_list[count.index]
   }
+`
+
+
