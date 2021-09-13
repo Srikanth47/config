@@ -6,7 +6,7 @@
 2) CloudWatch Event rule
 3) SNS topic
 
-![work](https://user-images.githubusercontent.com/2727726/133079279-34090b48-4130-4ac3-b01a-5a53f9d41683.png)
+![work2](https://user-images.githubusercontent.com/2727726/133082625-51fc2b1c-3eb7-462a-8a78-5e0dafd5656d.png)
 
 
 1) AWS Config will keeps on monitoring the resources, when ever there is new resources or change to the resource is it will keep tracking those resources
