@@ -51,10 +51,19 @@ Here is the CloudWatch Event pattern rule we configured, which will be deployed 
 ## Deployment steps:
 
 `$CD to WorkSpace`
-`$cat varible.tf` to add email subscriptions to get the notifications
-  change line according to req default = ["example@gmail.com", "example2@gmail.com"]
+
+*to add email subscriptions to get the notifications*
+
+`$vi varible.tf`  
+
+change line according to req default = ["example@gmail.com", "example2@gmail.com"]
+  
 `$terraform init`
-`$terraform plan` to verify/check what are all the new resources are added
+
+*to verify/check what are all the new resources are added*
+
+`$terraform plan` 
+
 `$terraform apply -auto-approve`
 
 
