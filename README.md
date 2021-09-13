@@ -48,7 +48,7 @@ Here is the CloudWatch Event pattern rule we configured, which will be deployed 
   endpoint  =  var.sns_subscription_email_address_list[count.index]
   }
 `
-##Deployment steps:
+## Deployment steps:
 
 `$CD to WorkSpace`
 `$cat varible.tf` to add email subscriptions to get the notifications
